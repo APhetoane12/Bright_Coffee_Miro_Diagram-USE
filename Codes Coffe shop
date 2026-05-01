@@ -1,0 +1,58 @@
+
+---Query 1: Viewing first 100 rows of the table
+select * from `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1` limit 100;
+
+
+---Query 2: Viewing distinct store locations
+SELECT DISTINCT store_location 
+from `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`;
+
+---Query 3: Select specific colums
+SELECT transaction_id, 
+       product_category,
+       unit_price
+ FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`;  
+
+---Query 4: Using a culumn alias
+SELECT product_category AS category,
+       unit_price as product_price
+ FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`;
+
+---Query 5: filtering using where
+SELECT *
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`
+WHERE product_category = 'Coffee';
+
+---Query 6: filtering using where and AND
+SELECT *
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`
+WHERE product_category = 'Coffee'
+AND unit_price > 3;
+
+---Query 7: Finding minimum and maximum unit price
+SELECT MIN(unit_price) AS Lowest_Price,
+       MAX(unit_price) AS Highest_Price
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`;
+
+---Query 8: Filtering using WHERE and OR
+SELECT *
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`
+WHERE product_category = 'Coffee' 
+OR product_category = 'Tea';
+
+---Query 9: Filter using WHERE and OR
+SELECT store_location
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`
+WHERE product_category = 'Coffee' 
+OR product_category = 'Tea';
+
+
+SELECT store_location,
+        product_category
+FROM `workspace`.`default`.`1773682225332_bright_coffee_shop_analysis_case_study_1_1`
+WHERE product_category = 'Coffee' 
+OR product_category = 'Tea';
+
+---Query 10: Filter using WHERE and OR
+
+
